@@ -1,0 +1,8 @@
+name = "espress"
+uuid = "34b7f61b-799e-4aa8-84dc-ccd4e2e94c3d"
+authors = ["edwloef <75493688+edwloef@users.noreply.github.com>"]
+version = "0.0.1"
+
+[deps]
+Decimals = "abce61dc-4473-55a0-ba07-351d65e31d42"
+MLStyle = "d8e11817-5142-5d16-987a-aa16d5891078"
