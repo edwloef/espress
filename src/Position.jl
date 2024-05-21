@@ -1,5 +1,3 @@
-include("Types.jl")
-
 function advance!(position::Position)::Union{Char, Nothing}
     if position.position >= length(position.code[position.line])
         if position.line >= length(position.code)

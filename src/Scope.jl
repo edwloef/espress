@@ -1,5 +1,3 @@
-include("Types.jl")
-
 function get(scope::Scope, reference::String, position::Range)::Union{Node, Error}
     result = Base.get(scope.symbol_table, reference, nothing)
     !isnothing(result) && return result

@@ -1,11 +1,17 @@
+module espress
+
 include("Types.jl")
+include("Node.jl")
+include("Scope.jl")
 include("Position.jl")
 include("Error.jl")
 include("Lexer.jl")
 include("Parser.jl")
 include("Interpreter.jl")
 
-function julia_main()::Cint
+export espress_run
+
+function espress_run()::Cint
     if length(ARGS) != 1
         println("Please provide an espress file.")
         return 1
@@ -35,7 +41,7 @@ function julia_main()::Cint
     return 0
 end
 
-julia_main()
+end
 
 # using Profile
 # @time @profile julia_main()

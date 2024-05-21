@@ -1,5 +1,3 @@
-include("Types.jl")
-
 ok(value) = true
 ok(value::Error) = false
 
