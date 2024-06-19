@@ -11,13 +11,9 @@ include("Interpreter.jl")
 
 export espress_run
 
-function espress_run()::Cint
-    if length(ARGS) != 1
-        println("Please provide an espress file.")
-        return 1
-    end
+function espress_run(file::String)::Cint
     code = String[]
-    open(ARGS[1]) do file
+    open(file) do file
         while !eof(file)
             push!(code, strip(readline(file, keep = true)))
         end
@@ -43,6 +39,5 @@ end
 
 end
 
-# using Profile
-# @time @profile julia_main()
-# Profile.print(format = :flat)
+using .espress
+espress_run(ARGS[1])
