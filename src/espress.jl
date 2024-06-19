@@ -38,6 +38,3 @@ function espress_run(file::String)::Cint
 end
 
 end
-
-using .espress
-espress_run(ARGS[1])
